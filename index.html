@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONS Seguros | Consórcio &amp; Seguros em São Paulo</title>
+<meta name="description" content="Corretora de seguros e consórcio em São Paulo. Automóvel, residencial, vida, saúde, viagem, empresarial e equipamentos portáteis. Cálculo grátis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#home" class="brand">
+      <img src="images/logo-nav.png" alt="ONS Consórcio & Seguros" class="brand__logo">
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#seguros">Seguros</a>
+      <a href="#seguradoras">Seguradoras</a>
+      <a href="#assistencia">Assistência 24h</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a href="#contato" class="btn btn--ghost header__cta">Peça seu cálculo</a>
+
+    <button class="burger" id="burger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#seguros">Seguros</a>
+    <a href="#seguradoras">Seguradoras</a>
+    <a href="#assistencia">Assistência 24h</a>
+    <a href="#contato">Contato</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero__blob hero__blob--1"></div>
+  <div class="hero__blob hero__blob--2"></div>
+  <div class="hero__grid"></div>
+
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow" data-reveal>Corretora de seguros em São Paulo</p>
+      <h1 data-reveal>
+        Proteção de verdade <span class="text-gradient">para o que importa</span> pra você
+      </h1>
+      <p class="hero__lead" data-reveal>
+        Comparamos as principais seguradoras e consórcios do país para achar a melhor relação
+        custo-benefício para seu carro, casa, vida, saúde ou empresa — com atendimento humano,
+        rápido e sem enrolação.
+      </p>
+      <div class="hero__actions" data-reveal>
+        <a href="#contato" class="btn btn--primary">Peça seu cálculo grátis</a>
+        <a href="https://api.whatsapp.com/send?phone=5511940209090&text=Ol%C3%A1%2C+estou+vindo+pelo+site+da+Corretora" target="_blank" rel="noopener" class="btn btn--outline">
+          Falar no WhatsApp
+        </a>
+      </div>
+
+      <div class="hero__stats" data-reveal>
+        <div class="stat">
+          <div class="stat__value"><span class="stat__num" data-count="15">0</span><span class="stat__suffix">+</span></div>
+          <span class="stat__label">anos de experiência</span>
+        </div>
+        <div class="stat">
+          <div class="stat__value"><span class="stat__num" data-count="17">0</span><span class="stat__suffix">+</span></div>
+          <span class="stat__label">seguradoras parceiras</span>
+        </div>
+        <div class="stat">
+          <div class="stat__value"><span class="stat__num" data-count="8">0</span></div>
+          <span class="stat__label">linhas de proteção</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__panel" data-reveal>
+      <div class="quote-card">
+        <div class="quote-card__row">
+          <div class="quote-card__field">
+            <label>Tipo de seguro</label>
+            <select>
+              <option>Automóvel</option>
+              <option>Residencial</option>
+              <option>Vida</option>
+              <option>Saúde</option>
+              <option>Viagem</option>
+              <option>Empresarial</option>
+              <option>Consórcio</option>
+              <option>Equipamentos Portáteis</option>
+            </select>
+          </div>
+          <div class="quote-card__field">
+            <label>Seu nome</label>
+            <input type="text" placeholder="Como podemos te chamar?">
+          </div>
+          <div class="quote-card__field">
+            <label>WhatsApp</label>
+            <input type="tel" placeholder="(11) 90000-0000">
+          </div>
+          <button class="btn btn--primary quote-card__submit">Solicitar cálculo</button>
+        </div>
+      </div>
+      <div class="floating-card floating-card--1">
+        <span class="dot"></span> Resposta em poucas horas
+      </div>
+      <div class="floating-card floating-card--2">
+        Atendimento humano, sem robôs
+      </div>
+    </div>
+  </div>
+
+  <a href="#sobre" class="scroll-cue" aria-label="Rolar para baixo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l7 7 7-7"/></svg>
+  </a>
+</section>
+
+<!-- ===== SOBRE ===== -->
+<section class="section" id="sobre">
+  <div class="container about">
+    <div class="about__copy">
+      <p class="eyebrow" data-reveal>Quem somos</p>
+      <h2 data-reveal>Mais de 15 anos ajudando pessoas e empresas a se protegerem</h2>
+      <p data-reveal>
+        A ONS Consórcio &amp; Seguros trabalha com as principais operadoras de consórcio e seguros
+        do país, para pessoas físicas e jurídicas. Nossa missão é entregar a <strong>melhor relação
+        custo-benefício</strong> em soluções customizadas de proteção pessoal e patrimonial — com
+        agilidade e um serviço de altíssima qualidade.
+      </p>
+      <p data-reveal>
+        Os sócios da ONS têm mais de 15 anos de experiência no mercado de seguros, com passagem por
+        instituições financeiras líderes. Unimos essa bagagem a treinamento constante e técnicas
+        modernas de atendimento para entregar sempre a melhor solução — com
+        <strong>respeito, ética e profissionalismo</strong>.
+      </p>
+
+      <div class="about__pillars">
+        <div class="pillar" data-reveal>
+          <span class="pillar__num">01</span>
+          <div class="pillar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12l2.5 2.5L16 9"/><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/></svg></div>
+          <h4>Atendimento humano</h4>
+          <p>Time especializado que entende sua real necessidade antes de indicar qualquer produto.</p>
+        </div>
+        <div class="pillar" data-reveal>
+          <span class="pillar__num">02</span>
+          <div class="pillar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l-3 6a3.5 3.5 0 0 0 7 0l-3-6zM19 7l-3 6a3.5 3.5 0 0 0 7 0l-3-6zM5 7h14M8 21h8"/></svg></div>
+          <h4>Comparação justa</h4>
+          <p>Cotamos entre as maiores seguradoras do país para achar o melhor custo-benefício.</p>
+        </div>
+        <div class="pillar" data-reveal>
+          <span class="pillar__num">03</span>
+          <div class="pillar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+          <h4>Agilidade</h4>
+          <p>Cálculos rápidos e suporte contínuo, do orçamento ao acionamento do sinistro.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about__visual">
+      <div class="about__card about__card--main" data-reveal>
+        <svg class="about__quote-mark" viewBox="0 0 44 34" fill="currentColor" aria-hidden="true"><path d="M0 34V20.4C0 9.1 6.8 1.7 17.6 0l2 5.1C13 6.7 9.7 10.6 9.2 16h8.4v18H0zm24.4 0V20.4C24.4 9.1 31.2 1.7 42 0l2 5.1c-6.6 1.6-9.9 5.5-10.4 10.9h8.4v18H24.4z"/></svg>
+        <p class="about__quote-text">O único lugar onde o sucesso vem antes do trabalho é no dicionário.</p>
+        <div class="about__card-divider"></div>
+        <div class="about__card-foot">
+          <span class="about__card-kicker">ONS Consórcio &amp; Seguros</span>
+          <span class="about__card-since">Sócios com mais de 15 anos de mercado financeiro e de seguros</span>
+        </div>
+      </div>
+
+      <div class="about__badge" data-reveal>
+        <div class="about__badge-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div>
+          <strong>Ética &amp; transparência</strong>
+          <span>em cada atendimento, com clientes e parceiros</span>
+        </div>
+      </div>
+
+      <img src="images/logo-completo.png" alt="Grupo ONS — Soluções para seu negócio, desde 2012" class="about__logo" data-reveal>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEGUROS (PRODUTOS) ===== -->
+<section class="section section--tint" id="seguros">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow" data-reveal>O que protegemos</p>
+      <h2 data-reveal>Um seguro para cada momento da sua vida</h2>
+      <p class="section__lead" data-reveal>Fale com a gente e receba um cálculo sob medida — sem compromisso.</p>
+    </div>
+
+    <div class="products-grid">
+      <a href="https://www.onscorretoradeseguros.com.br/seguro-automovel" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13"/><path d="M3 13h18v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4z"/><circle cx="7.5" cy="17.5" r="1.3"/><circle cx="16.5" cy="17.5" r="1.3"/></svg></div>
+        <h3>Automóvel</h3>
+        <p>Proteção completa para o seu carro, com assistência 24h nas maiores seguradoras.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="https://www.onscorretoradeseguros.com.br/seguro-residencial" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-5h4v5h3a1 1 0 0 0 1-1v-9"/></svg></div>
+        <h3>Residencial</h3>
+        <p>Sua casa protegida contra incêndio, roubo, danos elétricos e muito mais.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="https://www.onscorretoradeseguros.com.br/seguro-vida" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-10-9.3C.4 7.4 2 4 5.4 4c2 0 3.4 1.1 4.2 2.4C10.4 5.1 11.8 4 13.8 4 17.2 4 18.8 7.4 17.2 10.7 15.5 15.4 12 20 12 20z"/></svg></div>
+        <h3>Vida</h3>
+        <p>Segurança financeira para quem você ama, em qualquer imprevisto.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="https://www.onscorretoradeseguros.com.br/eq-portateis" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg></div>
+        <h3>Equipamentos Portáteis</h3>
+        <p>Celular, notebook e outros eletrônicos protegidos contra quebra, roubo e furto.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="https://www.onscorretoradeseguros.com.br/consorcio" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4.2"/><path d="M11 12l9-9M16 3l3 3M13 6l2.5 2.5"/></svg></div>
+        <h3>Consórcio</h3>
+        <p>Planeje a compra do seu carro, imóvel ou outro bem sem pagar juros.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="https://www.onscorretoradeseguros.com.br/planos-de-saude" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.5-9C.8 8.5 3 4.5 7 5.2c2.3.4 4 2.2 5 4 1-1.8 2.7-3.6 5-4 4-.7 6.2 3.3 4.5 6.8C19 16.6 12 21 12 21z"/><path d="M9.5 11h2M11.5 9v4"/></svg></div>
+        <h3>Saúde</h3>
+        <p>Planos individuais, familiares e empresariais nas maiores operadoras.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="https://www.onscorretoradeseguros.com.br/seguro-viagem" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l7-1.5L14.5 3l1.8.7-3 8.2 5.5-.9 2.2 1.6-7.3 3.4-1.4 4.5-1.6-.6.4-4L3 13z"/></svg></div>
+        <h3>Viagem</h3>
+        <p>Cobertura médica e assistência para viagens nacionais e internacionais.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="https://www.onscorretoradeseguros.com.br/seguro-empresarial" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5M3 13h18"/></svg></div>
+        <h3>Empresarial</h3>
+        <p>Soluções sob medida para proteger o patrimônio e a operação do seu negócio.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SEGURADORAS ===== -->
+<section class="section" id="seguradoras">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow" data-reveal>Parceiros</p>
+      <h2 data-reveal>Trabalhamos com as maiores seguradoras do Brasil</h2>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee__track" id="marqueeTrack">
+      <!-- duplicated by JS for seamless loop -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== ASSISTÊNCIA 24H ===== -->
+<section class="section section--dark" id="assistencia">
+  <div class="container">
+    <div class="section__head section__head--light">
+      <p class="eyebrow eyebrow--light" data-reveal>Emergência</p>
+      <h2 data-reveal>Assistência 24 horas</h2>
+      <p class="section__lead section__lead--light" data-reveal>
+        Guarde estes contatos. Em caso de sinistro ou emergência, ligue direto para a sua seguradora.
+      </p>
+    </div>
+
+    <div class="assist-grid" id="assistGrid">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTATO ===== -->
+<section class="section" id="contato">
+  <div class="container contact">
+    <div class="contact__info" data-reveal>
+      <p class="eyebrow">Fale com a gente</p>
+      <h2>Vamos encontrar o seguro certo para você</h2>
+      <p class="contact__lead">Responda o formulário ou fale direto pelos canais abaixo.</p>
+
+      <ul class="contact__list">
+        <li>
+          <span class="contact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>
+          <div><strong>E-mail</strong><br><a href="mailto:contato@onsseguros.com.br">contato@onsseguros.com.br</a></div>
+        </li>
+        <li>
+          <span class="contact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2C10.5 21 3 13.5 3 6a2 2 0 0 1 2-2z"/></svg></span>
+          <div><strong>Telefone</strong><br>(11) 2614-2589</div>
+        </li>
+        <li>
+          <span class="contact__icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4c0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.8.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/></svg></span>
+          <div><strong>WhatsApp</strong><br>(11) 95000-5051 · (11) 94020-9090</div>
+        </li>
+        <li>
+          <span class="contact__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-12a7 7 0 0 0-14 0c0 5.4 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></span>
+          <div><strong>Endereço</strong><br>Rua Carneiro da Cunha, 1192 – Sala 31<br>Saúde, São Paulo/SP – CEP 04144-001</div>
+        </li>
+      </ul>
+    </div>
+
+    <form class="contact__form" data-reveal onsubmit="return false;">
+      <div class="form-row">
+        <div class="form-field">
+          <label>Nome</label>
+          <input type="text" required placeholder="Seu nome completo">
+        </div>
+        <div class="form-field">
+          <label>WhatsApp</label>
+          <input type="tel" required placeholder="(11) 90000-0000">
+        </div>
+      </div>
+      <div class="form-field">
+        <label>E-mail</label>
+        <input type="email" required placeholder="voce@email.com">
+      </div>
+      <div class="form-field">
+        <label>Tipo de seguro</label>
+        <select>
+          <option>Automóvel</option>
+          <option>Residencial</option>
+          <option>Vida</option>
+          <option>Saúde</option>
+          <option>Viagem</option>
+          <option>Empresarial</option>
+          <option>Consórcio</option>
+          <option>Equipamentos Portáteis</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Mensagem</label>
+        <textarea rows="3" placeholder="Conte rapidamente o que você precisa"></textarea>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox" required>
+        <span>Concordo em compartilhar minhas informações com a ONS Seguros e seguradoras parceiras para contato e orçamentos.</span>
+      </label>
+
+      <button class="btn btn--primary btn--block" type="submit">Enviar solicitação</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="brand__mark">ONS</span>
+      <span class="brand__text">Consórcio &amp; Seguros</span>
+      <p>Rua Carneiro da Cunha, 1192 – Sala 31, Saúde, São Paulo/SP – CEP 04144-001</p>
+    </div>
+
+    <div class="footer__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.4962422610643!2d-46.638003985489824!3d-23.622393069733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a54348d5001%3A0x9da5ae6a7cc470dc!2sR.%20Carneiro%20da%20Cunha%2C%201192%20-%2031%20-%20Vila%20da%20Sa%C3%BAde%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004144-001!5e0!3m2!1spt-BR!2sbr!4v1568743591092!5m2!1spt-BR!2sbr"
+        width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="footer__links">
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#seguros">Seguros</a>
+      <a href="#seguradoras">Seguradoras</a>
+      <a href="#assistencia">Assistência 24h</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <p>© <span id="year"></span> ONS Consórcio &amp; Seguros. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-fab" href="https://api.whatsapp.com/send?phone=5511940209090&text=Ol%C3%A1%2C+estou+vindo+pelo+site+da+Corretora" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4c0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.8.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
