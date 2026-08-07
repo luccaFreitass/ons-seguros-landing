@@ -62,8 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const buildMarqueeItems = () => insurers.map(i =>
     `<div class="marquee__item"><img src="${i.src}" alt="${i.name}" loading="eager" decoding="async"></div>`
   ).join("");
-  // duplicate the set once for a seamless infinite loop
-  marqueeTrack.innerHTML = buildMarqueeItems() + buildMarqueeItems();
+  // primeiro grupo = conteúdo real; segundo grupo = cópia só para o loop contínuo
+  // no desktop (fica escondido no mobile, onde vira grade estática sem animação)
+  marqueeTrack.innerHTML =
+    `<div class="marquee__set">${buildMarqueeItems()}</div>` +
+    `<div class="marquee__set" aria-hidden="true">${buildMarqueeItems()}</div>`;
 
   /* ---------- Assistência 24h ---------- */
   const assist = [
