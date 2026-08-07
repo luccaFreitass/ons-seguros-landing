@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const marqueeTrack = document.getElementById("marqueeTrack");
   const buildMarqueeItems = () => insurers.map(i =>
-    `<div class="marquee__item"><img src="${i.src}" alt="${i.name}" loading="lazy"></div>`
+    `<div class="marquee__item"><img src="${i.src}" alt="${i.name}" loading="eager" decoding="async"></div>`
   ).join("");
   // duplicate the set once for a seamless infinite loop
   marqueeTrack.innerHTML = buildMarqueeItems() + buildMarqueeItems();

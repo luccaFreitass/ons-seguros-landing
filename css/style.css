@@ -323,7 +323,11 @@ button, input, select, textarea{ font-family:inherit; font-size:inherit; }
   padding:12px 0 4px;
 }
 .marquee__track{ display:flex; align-items:center; gap:22px; width:max-content; animation:marquee-scroll 40s linear infinite; padding:10px 4px 26px; }
-.marquee:hover .marquee__track{ animation-play-state:paused; }
+/* pausar no hover só em dispositivos com mouse de verdade — em touch (celular) um toque
+   fica "grudado" no :hover e trava o carrossel, então lá ele roda sempre */
+@media (hover: hover) and (pointer: fine){
+  .marquee:hover .marquee__track{ animation-play-state:paused; }
+}
 @keyframes marquee-scroll{ 0%{ transform:translateX(0); } 100%{ transform:translateX(-50%); } }
 .marquee__item{
   display:flex; align-items:center; justify-content:center;
