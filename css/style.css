@@ -100,7 +100,7 @@ button, input, select, textarea{ font-family:inherit; font-size:inherit; }
   border-bottom:1px solid var(--line);
   box-shadow:0 6px 20px -18px rgba(20,23,31,.3);
 }
-.header__inner{ display:flex; align-items:center; gap:28px; }
+.header__inner{ display:flex; align-items:center; gap:28px; position:relative; z-index:1001; }
 .brand{ display:flex; align-items:center; gap:10px; margin-right:auto; }
 .brand__logo{ height:76px; width:auto; display:block; transition:transform .25s ease; transform-origin:left center; }
 .header.is-scrolled .brand__logo{ transform:scale(.7); }
@@ -124,14 +124,58 @@ button, input, select, textarea{ font-family:inherit; font-size:inherit; }
 .burger.is-active span:nth-child(2){ opacity:0; }
 .burger.is-active span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
+body.nav-open{ overflow:hidden; }
+
 .nav-mobile{
-  display:flex; flex-direction:column; gap:2px;
-  max-height:0; overflow:hidden; opacity:0;
-  transition:max-height .35s ease, opacity .3s ease;
-  background:rgba(255,255,255,.98); backdrop-filter:blur(10px);
+  position:fixed; inset:0; height:100dvh;
+  display:flex; flex-direction:column; justify-content:center;
+  gap:36px;
+  padding:110px 32px 40px;
+  background:linear-gradient(165deg, var(--navy-900), var(--navy-950));
+  overflow:hidden auto;
+  opacity:0; visibility:hidden; pointer-events:none;
+  transition:opacity .4s ease, visibility .4s ease;
 }
-.nav-mobile.is-open{ max-height:400px; opacity:1; border-top:1px solid var(--line); box-shadow:0 12px 24px -18px rgba(20,23,31,.25); }
-.nav-mobile a{ padding:16px 24px; font-weight:500; color:var(--ink-700); border-bottom:1px solid var(--line); }
+.nav-mobile.is-open{ opacity:1; visibility:visible; pointer-events:auto; }
+
+.nav-mobile__blob{
+  position:absolute; bottom:-140px; right:-120px;
+  width:340px; height:340px; border-radius:50%;
+  background:radial-gradient(circle, var(--amber), transparent 70%);
+  opacity:.16; filter:blur(90px); pointer-events:none;
+}
+
+.nav-mobile__links{ display:flex; flex-direction:column; position:relative; z-index:1; }
+.nav-mobile__links a{
+  display:flex; align-items:baseline; gap:14px;
+  padding:16px 0; border-bottom:1px solid rgba(255,255,255,.12);
+  font-family:var(--ff-display); font-weight:600; font-size:1.3rem;
+  color:var(--on-navy-100);
+  opacity:0; transform:translateY(16px);
+  transition:opacity .4s ease, transform .4s ease, color .2s ease;
+}
+.nav-mobile__links a:hover, .nav-mobile__links a:active{ color:var(--amber); }
+.nav-mobile__index{ font-size:.72rem; font-weight:700; color:var(--amber); }
+.nav-mobile.is-open .nav-mobile__links a{ opacity:1; transform:translateY(0); }
+.nav-mobile.is-open .nav-mobile__links a:nth-child(1){ transition-delay:.08s; }
+.nav-mobile.is-open .nav-mobile__links a:nth-child(2){ transition-delay:.13s; }
+.nav-mobile.is-open .nav-mobile__links a:nth-child(3){ transition-delay:.18s; }
+.nav-mobile.is-open .nav-mobile__links a:nth-child(4){ transition-delay:.23s; }
+.nav-mobile.is-open .nav-mobile__links a:nth-child(5){ transition-delay:.28s; }
+.nav-mobile.is-open .nav-mobile__links a:nth-child(6){ transition-delay:.33s; }
+
+.nav-mobile__footer{
+  position:relative; z-index:1;
+  display:flex; flex-direction:column; gap:16px;
+  opacity:0; transform:translateY(16px);
+  transition:opacity .4s ease .38s, transform .4s ease .38s;
+}
+.nav-mobile.is-open .nav-mobile__footer{ opacity:1; transform:translateY(0); }
+.nav-mobile__whatsapp{
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  color:var(--on-navy-300); font-weight:600; font-size:.92rem;
+}
+.nav-mobile__whatsapp svg{ width:18px; height:18px; color:#25d366; }
 
 /* ---------- Hero ---------- */
 .hero{
@@ -514,6 +558,10 @@ button, input, select, textarea{ font-family:inherit; font-size:inherit; }
 @media (max-width: 768px){
   .nav, .header__cta{ display:none; }
   .burger{ display:flex; }
+  .brand__logo{ height:42px; }
+  .header{ padding:14px 0; }
+  .header.is-scrolled{ padding:10px 0; }
+  .header.is-scrolled .brand__logo{ transform:scale(.85); }
   .hero{ padding:120px 0 60px; }
   .hero__stats{ gap:24px; }
   .about__pillars{ grid-template-columns:1fr; }
@@ -544,4 +592,7 @@ button, input, select, textarea{ font-family:inherit; font-size:inherit; }
   .products-grid{ grid-template-columns:1fr; }
   .assist-grid{ grid-template-columns:1fr; }
   .hero__stats{ gap:18px 26px; }
+  .brand__logo{ height:36px; }
+  .nav-mobile{ padding:96px 24px 32px; gap:24px; }
+  .nav-mobile__links a{ font-size:1.15rem; padding:13px 0; }
 }

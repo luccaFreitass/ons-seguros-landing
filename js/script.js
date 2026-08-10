@@ -27,15 +27,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("burger");
   const navMobile = document.getElementById("navMobile");
 
+  const openMobileNav = () => {
+    burger.classList.add("is-active");
+    navMobile.classList.add("is-open");
+    document.body.classList.add("nav-open");
+    burger.setAttribute("aria-label", "Fechar menu");
+  };
+  const closeMobileNav = () => {
+    burger.classList.remove("is-active");
+    navMobile.classList.remove("is-open");
+    document.body.classList.remove("nav-open");
+    burger.setAttribute("aria-label", "Abrir menu");
+  };
+
   burger.addEventListener("click", () => {
-    burger.classList.toggle("is-active");
-    navMobile.classList.toggle("is-open");
+    navMobile.classList.contains("is-open") ? closeMobileNav() : openMobileNav();
   });
   navMobile.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      burger.classList.remove("is-active");
-      navMobile.classList.remove("is-open");
-    });
+    link.addEventListener("click", closeMobileNav);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMobileNav();
   });
 
   /* ---------- Seguradoras (marquee) ---------- */
@@ -96,22 +108,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- Depoimentos (carrossel) ---------- */
-  // ⚠️ Textos de exemplo — trocar pelos depoimentos reais de clientes da ONS.
   const testimonials = [
     {
-      text: "Consegui um seguro auto com cobertura completa por um preço melhor do que eu imaginava. Atendimento rápido do início ao fim.",
-      name: "Cliente ONS",
-      role: "Seguro Automóvel"
+      text: "O atendimento foi muito rápido e sempre tive retorno quando precisei. Todas as minhas dúvidas foram esclarecidas de forma muito clara, o que tornou todo o processo do seguro fiança muito mais tranquilo.",
+      name: "Thiago Ruivo",
+      role: "Seguro Fiança"
     },
     {
-      text: "Fizeram todo o processo do seguro residencial de forma simples, explicando cada detalhe. Me senti seguro pra decidir.",
-      name: "Cliente ONS",
-      role: "Seguro Residencial"
+      text: "A contratação do plano de saúde foi muito mais simples do que eu imaginava. Tive todas as minhas dúvidas esclarecidas e o processo foi muito prático. Também conseguiram retirar todas as carências possíveis.",
+      name: "Daniela Santa",
+      role: "Plano de Saúde"
     },
     {
-      text: "Time atencioso e ágil. Recomendo pra quem quer comparar seguradoras sem perder tempo com burocracia.",
-      name: "Cliente ONS",
-      role: "Seguro de Vida"
+      text: "Na renovação do meu seguro, além de cuidarem de todo o processo, me orientaram sobre algumas opções para melhorar minhas coberturas. Gostei muito do atendimento e da preocupação em encontrar uma solução que realmente fizesse sentido para mim.",
+      name: "Luiz Carlos",
+      role: "Renovação de Seguro"
+    },
+    {
+      text: "Desde a contratação até a contemplação da minha carta, tive todo o suporte e acompanhamento. Fui orientado para dar o lance e consegui ser contemplado já no primeiro lance. Atendimento excepcional!",
+      name: "Leandro Ribeiro",
+      role: "Consórcio"
+    },
+    {
+      text: "Quando precisei acionar o seguro, tive todo o suporte que precisava. A equipe me acompanhou até a indenização da seguradora e sempre esteve disponível para esclarecer minhas dúvidas. Fez toda a diferença ter esse acompanhamento.",
+      name: "Gabriel Passos",
+      role: "Sinistro Atendido"
     }
   ];
 
