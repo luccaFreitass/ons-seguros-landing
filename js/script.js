@@ -23,6 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* ---------- Mini-form do Hero (quote-card) ---------- */
+  const quoteSubmit = document.getElementById("quoteSubmit");
+  if (quoteSubmit) {
+    quoteSubmit.addEventListener("click", () => {
+      const type = document.getElementById("quoteType").value;
+      const name = document.getElementById("quoteName").value.trim();
+      const phone = document.getElementById("quotePhone").value.trim();
+
+      let msg = `Olá! Gostaria de solicitar um cálculo de ${type}.`;
+      if (name) msg += ` Meu nome é ${name}.`;
+      if (phone) msg += ` Meu WhatsApp: ${phone}.`;
+
+      const url = `https://api.whatsapp.com/send?phone=5511940209090&text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank", "noopener");
+    });
+  }
+
   /* ---------- Mobile nav ---------- */
   const burger = document.getElementById("burger");
   const navMobile = document.getElementById("navMobile");

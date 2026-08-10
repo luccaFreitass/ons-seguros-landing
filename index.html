@@ -104,7 +104,7 @@
         <div class="quote-card__row">
           <div class="quote-card__field">
             <label>Tipo de seguro</label>
-            <select>
+            <select id="quoteType">
               <option>Automóvel</option>
               <option>Residencial</option>
               <option>Vida</option>
@@ -121,13 +121,13 @@
           </div>
           <div class="quote-card__field">
             <label>Seu nome</label>
-            <input type="text" placeholder="Como podemos te chamar?">
+            <input type="text" id="quoteName" placeholder="Como podemos te chamar?">
           </div>
           <div class="quote-card__field">
             <label>WhatsApp</label>
-            <input type="tel" placeholder="(11) 90000-0000">
+            <input type="tel" id="quotePhone" placeholder="(11) 90000-0000">
           </div>
-          <button class="btn btn--primary quote-card__submit">Solicitar cálculo</button>
+          <button type="button" class="btn btn--primary quote-card__submit" id="quoteSubmit">Solicitar cálculo</button>
         </div>
       </div>
       <div class="floating-card floating-card--1">
