@@ -339,4 +339,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ---------- Corrige a chegada via link com #hash de outra página ----------
+     Ex.: um botão em seguro-automovel.html leva a "index.html#contato".
+     O navegador tenta pular pro #contato assim que a página carrega, mas o
+     marquee, os grids e as imagens ainda são montados via JS depois disso —
+     a altura da página muda e o salto do navegador fica desatualizado,
+     fazendo o usuário "sobrar" numa seção anterior (ex.: Assistência 24h).
+     Por isso refazemos o scroll depois que tudo (imagens incluídas) carregou. */
+  if (window.location.hash) {
+    const fixHashScroll = () => {
+      const target = document.querySelector(window.location.hash);
+      if (!target) return;
+      const offset = 84;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "auto" });
+    };
+    const runFix = () => {
+      fixHashScroll();
+      // segunda passada: garante mesmo se alguma imagem ainda assentar o layout
+      setTimeout(fixHashScroll, 350);
+    };
+    if (document.readyState === "complete") {
+      runFix();
+    } else {
+      window.addEventListener("load", runFix);
+    }
+  }
+
 });
