@@ -290,7 +290,7 @@ button, input, select, textarea{ font-family:inherit; font-size:inherit; }
 
 .about__logo{
   align-self:center;
-  width:100%; max-width:210px; height:auto;
+  width:100%; max-width:300px; height:auto;
   margin:40px auto 0;
   filter:drop-shadow(0 16px 30px rgba(20,30,55,.14));
 }
