@@ -5,7 +5,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Footer year ---------- */
-  document.getElementById("year").textContent = new Date().getFullYear();
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* ---------- Sticky header + scroll progress ---------- */
   const header = document.getElementById("header");
@@ -59,14 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const marqueeTrack = document.getElementById("marqueeTrack");
-  const buildMarqueeItems = () => insurers.map(i =>
-    `<div class="marquee__item"><img src="${i.src}" alt="${i.name}" loading="eager" decoding="async"></div>`
-  ).join("");
-  // primeiro grupo = conteúdo real; segundo grupo = cópia só para o loop contínuo
-  // no desktop (fica escondido no mobile, onde vira grade estática sem animação)
-  marqueeTrack.innerHTML =
-    `<div class="marquee__set">${buildMarqueeItems()}</div>` +
-    `<div class="marquee__set" aria-hidden="true">${buildMarqueeItems()}</div>`;
+  if (marqueeTrack) {
+    const buildMarqueeItems = () => insurers.map(i =>
+      `<div class="marquee__item"><img src="${i.src}" alt="${i.name}" loading="eager" decoding="async"></div>`
+    ).join("");
+    // primeiro grupo = conteúdo real; segundo grupo = cópia só para o loop contínuo
+    // no desktop (fica escondido no mobile, onde vira grade estática sem animação)
+    marqueeTrack.innerHTML =
+      `<div class="marquee__set">${buildMarqueeItems()}</div>` +
+      `<div class="marquee__set" aria-hidden="true">${buildMarqueeItems()}</div>`;
+  }
 
   /* ---------- Assistência 24h ---------- */
   const assist = [
@@ -83,12 +86,136 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const assistGrid = document.getElementById("assistGrid");
-  assistGrid.innerHTML = assist.map(a => `
-    <div class="assist-card" data-reveal>
-      <h4>${a.name}</h4>
-      ${a.numbers.map(n => `<span class="num">${n[0]}</span><span class="region">${n[1]}</span>`).join("")}
-    </div>
-  `).join("");
+  if (assistGrid) {
+    assistGrid.innerHTML = assist.map(a => `
+      <div class="assist-card" data-reveal>
+        <h4>${a.name}</h4>
+        ${a.numbers.map(n => `<span class="num">${n[0]}</span><span class="region">${n[1]}</span>`).join("")}
+      </div>
+    `).join("");
+  }
+
+  /* ---------- Depoimentos (carrossel) ---------- */
+  // ⚠️ Textos de exemplo — trocar pelos depoimentos reais de clientes da ONS.
+  const testimonials = [
+    {
+      text: "Consegui um seguro auto com cobertura completa por um preço melhor do que eu imaginava. Atendimento rápido do início ao fim.",
+      name: "Cliente ONS",
+      role: "Seguro Automóvel"
+    },
+    {
+      text: "Fizeram todo o processo do seguro residencial de forma simples, explicando cada detalhe. Me senti seguro pra decidir.",
+      name: "Cliente ONS",
+      role: "Seguro Residencial"
+    },
+    {
+      text: "Time atencioso e ágil. Recomendo pra quem quer comparar seguradoras sem perder tempo com burocracia.",
+      name: "Cliente ONS",
+      role: "Seguro de Vida"
+    }
+  ];
+
+  const testimonialText = document.getElementById("testimonialText");
+  const testimonialName = document.getElementById("testimonialName");
+  const testimonialRole = document.getElementById("testimonialRole");
+  const testimonialDots = document.getElementById("testimonialDots");
+  const testimonialPrev = document.getElementById("testimonialPrev");
+  const testimonialNext = document.getElementById("testimonialNext");
+  let testimonialIndex = 0;
+  let testimonialTimer = null;
+
+  if (testimonialText && testimonials.length) {
+    testimonialDots.innerHTML = testimonials
+      .map((_, i) => `<button type="button" aria-label="Ver depoimento ${i + 1}"></button>`)
+      .join("");
+    const dots = Array.from(testimonialDots.children);
+
+    const renderTestimonial = (index) => {
+      const t = testimonials[index];
+      const apply = () => {
+        testimonialText.textContent = t.text;
+        testimonialName.textContent = t.name;
+        testimonialRole.textContent = t.role;
+        dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+      };
+      if (window.gsap) {
+        gsap.to([testimonialText, testimonialName, testimonialRole], {
+          opacity: 0, y: 6, duration: 0.2, ease: "power1.in",
+          onComplete: () => {
+            apply();
+            gsap.fromTo([testimonialText, testimonialName, testimonialRole],
+              { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.04 });
+          }
+        });
+      } else {
+        apply();
+      }
+    };
+
+    const goTo = (index) => {
+      testimonialIndex = (index + testimonials.length) % testimonials.length;
+      renderTestimonial(testimonialIndex);
+    };
+
+    const resetAutoplay = () => {
+      if (testimonialTimer) clearInterval(testimonialTimer);
+      testimonialTimer = setInterval(() => goTo(testimonialIndex + 1), 7000);
+    };
+
+    testimonialPrev.addEventListener("click", () => { goTo(testimonialIndex - 1); resetAutoplay(); });
+    testimonialNext.addEventListener("click", () => { goTo(testimonialIndex + 1); resetAutoplay(); });
+    dots.forEach((dot, i) => dot.addEventListener("click", () => { goTo(i); resetAutoplay(); }));
+
+    renderTestimonial(0);
+    resetAutoplay();
+  }
+
+  /* ---------- Atendimento (mock de chat) ---------- */
+  const chatBody = document.getElementById("chatBody");
+  if (chatBody) {
+    const chatMessages = [
+      { sender: "received", text: "Oi! Vocês fazem seguro de carro pra fora de SP também?", time: "10:14" },
+      { sender: "sent", text: "Fazemos sim! Atendemos o Brasil inteiro 🙂", time: "10:14" },
+      { sender: "received", text: "Perfeito. Em quanto tempo sai um cálculo?", time: "10:15" }
+    ];
+
+    chatBody.innerHTML = chatMessages.map(m => `
+      <div class="chat-row chat-row--${m.sender}">
+        <div class="chat-bubble chat-bubble--${m.sender}">${m.text}</div>
+        <span class="chat-bubble__time">${m.time}</span>
+      </div>
+    `).join("") + `
+      <div class="chat-row chat-row--sent">
+        <div class="chat-typing" id="chatTyping"><span></span><span></span><span></span></div>
+      </div>
+    `;
+
+    const chatEls = chatBody.querySelectorAll(".chat-bubble, .chat-typing");
+    const chatTyping = document.getElementById("chatTyping");
+
+    const playChat = () => {
+      if (window.gsap) {
+        gsap.to(chatEls, {
+          opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.6)",
+          stagger: 0.45,
+          onComplete: () => {
+            gsap.to(chatTyping.querySelectorAll("span"), {
+              y: -5, opacity: 1, duration: 0.5, ease: "sine.inOut",
+              repeat: -1, yoyo: true, stagger: { each: 0.15, repeat: -1 }
+            });
+          }
+        });
+      } else {
+        chatEls.forEach(el => { el.style.opacity = 1; el.style.transform = "none"; });
+      }
+    };
+
+    if (window.gsap && window.ScrollTrigger) {
+      ScrollTrigger.create({ trigger: chatBody, start: "top 85%", once: true, onEnter: playChat });
+    } else {
+      playChat();
+    }
+  }
 
   /* ---------- GSAP animations ---------- */
   if (window.gsap && window.ScrollTrigger) {

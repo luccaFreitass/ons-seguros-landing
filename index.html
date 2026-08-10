@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ONS Seguros | Consórcio &amp; Seguros em São Paulo</title>
-<meta name="description" content="Corretora de seguros e consórcio em São Paulo. Automóvel, residencial, vida, saúde, viagem, empresarial e equipamentos portáteis. Cálculo grátis.">
+<title>ONS Seguros | Consórcio &amp; Seguros em Todo o Brasil</title>
+<meta name="description" content="Corretora de seguros e consórcio com atendimento em todo o Brasil. Automóvel, residencial, vida, saúde, viagem, empresarial, fiança, financiamento e mais. Cálculo grátis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,6 +29,7 @@
       <a href="#seguros">Seguros</a>
       <a href="#seguradoras">Seguradoras</a>
       <a href="#assistencia">Assistência 24h</a>
+      <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
     </nav>
 
@@ -43,6 +44,7 @@
     <a href="#seguros">Seguros</a>
     <a href="#seguradoras">Seguradoras</a>
     <a href="#assistencia">Assistência 24h</a>
+    <a href="#depoimentos">Depoimentos</a>
     <a href="#contato">Contato</a>
   </div>
 </header>
@@ -55,7 +57,7 @@
 
   <div class="container hero__inner">
     <div class="hero__copy">
-      <p class="eyebrow" data-reveal>Corretora de seguros em São Paulo</p>
+      <p class="eyebrow" data-reveal>Atendimento em todo o Brasil</p>
       <h1 data-reveal>
         Proteção de verdade <span class="text-gradient">para o que importa</span> pra você
       </h1>
@@ -101,6 +103,10 @@
               <option>Empresarial</option>
               <option>Consórcio</option>
               <option>Equipamentos Portáteis</option>
+              <option>Fiança</option>
+              <option>Financiamento</option>
+              <option>Empréstimo com Garantia</option>
+              <option>Condomínio</option>
             </select>
           </div>
           <div class="quote-card__field">
@@ -176,7 +182,7 @@
         <div class="about__card-divider"></div>
         <div class="about__card-foot">
           <span class="about__card-kicker">ONS Consórcio &amp; Seguros</span>
-          <span class="about__card-since">Sócios com mais de 15 anos de mercado financeiro e de seguros</span>
+          <span class="about__card-since">Sócios com mais de 30 anos de mercado financeiro e de seguros</span>
         </div>
       </div>
 
@@ -195,6 +201,34 @@
   </div>
 </section>
 
+<!-- ===== ATENDIMENTO (CHAT) ===== -->
+<section class="section" id="atendimento">
+  <div class="container chat-section">
+    <div class="chat-section__copy">
+      <p class="eyebrow" data-reveal>Atendimento</p>
+      <h2 data-reveal>Conversa de verdade, sem robô te enrolando</h2>
+      <p data-reveal>
+        Manda uma mensagem e fala direto com alguém do nosso time — sem menu automático,
+        sem espera. Resposta rápida, explicação clara e ninguém te empurra pro seguro errado.
+      </p>
+      <a href="https://api.whatsapp.com/send?phone=5511940209090&text=Ol%C3%A1%2C+estou+vindo+pelo+site+da+Corretora" target="_blank" rel="noopener" class="btn btn--primary" data-reveal>
+        Chamar no WhatsApp
+      </a>
+    </div>
+
+    <div class="chat-mock" data-reveal>
+      <div class="chat-mock__header">
+        <img src="images/logo-nav.png" alt="ONS Seguros" class="chat-mock__avatar">
+        <div class="chat-mock__who">
+          <strong>ONS Seguros</strong>
+          <span><i class="chat-mock__dot"></i> Online agora</span>
+        </div>
+      </div>
+      <div class="chat-mock__body" id="chatBody"></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== SEGUROS (PRODUTOS) ===== -->
 <section class="section section--tint" id="seguros">
   <div class="container">
@@ -205,52 +239,76 @@
     </div>
 
     <div class="products-grid">
-      <a href="https://www.onscorretoradeseguros.com.br/seguro-automovel" class="product-card" data-reveal>
+      <a href="seguro-automovel.html" class="product-card" data-reveal>
         <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13"/><path d="M3 13h18v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4z"/><circle cx="7.5" cy="17.5" r="1.3"/><circle cx="16.5" cy="17.5" r="1.3"/></svg></div>
         <h3>Automóvel</h3>
         <p>Proteção completa para o seu carro, com assistência 24h nas maiores seguradoras.</p>
         <span class="product-card__arrow">→</span>
       </a>
-      <a href="https://www.onscorretoradeseguros.com.br/seguro-residencial" class="product-card" data-reveal>
+      <a href="seguro-residencial.html" class="product-card" data-reveal>
         <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11.5L12 4l8 7.5"/><path d="M6 10v9a1 1 0 0 0 1 1h3v-5h4v5h3a1 1 0 0 0 1-1v-9"/></svg></div>
         <h3>Residencial</h3>
         <p>Sua casa protegida contra incêndio, roubo, danos elétricos e muito mais.</p>
         <span class="product-card__arrow">→</span>
       </a>
-      <a href="https://www.onscorretoradeseguros.com.br/seguro-vida" class="product-card" data-reveal>
+      <a href="seguro-vida.html" class="product-card" data-reveal>
         <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-10-9.3C.4 7.4 2 4 5.4 4c2 0 3.4 1.1 4.2 2.4C10.4 5.1 11.8 4 13.8 4 17.2 4 18.8 7.4 17.2 10.7 15.5 15.4 12 20 12 20z"/></svg></div>
         <h3>Vida</h3>
         <p>Segurança financeira para quem você ama, em qualquer imprevisto.</p>
         <span class="product-card__arrow">→</span>
       </a>
-      <a href="https://www.onscorretoradeseguros.com.br/eq-portateis" class="product-card" data-reveal>
+      <a href="equipamentos-portateis.html" class="product-card" data-reveal>
         <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg></div>
         <h3>Equipamentos Portáteis</h3>
         <p>Celular, notebook e outros eletrônicos protegidos contra quebra, roubo e furto.</p>
         <span class="product-card__arrow">→</span>
       </a>
-      <a href="https://www.onscorretoradeseguros.com.br/consorcio" class="product-card" data-reveal>
+      <a href="consorcio.html" class="product-card" data-reveal>
         <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4.2"/><path d="M11 12l9-9M16 3l3 3M13 6l2.5 2.5"/></svg></div>
         <h3>Consórcio</h3>
         <p>Planeje a compra do seu carro, imóvel ou outro bem sem pagar juros.</p>
         <span class="product-card__arrow">→</span>
       </a>
-      <a href="https://www.onscorretoradeseguros.com.br/planos-de-saude" class="product-card" data-reveal>
+      <a href="planos-de-saude.html" class="product-card" data-reveal>
         <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.4-9.5-9C.8 8.5 3 4.5 7 5.2c2.3.4 4 2.2 5 4 1-1.8 2.7-3.6 5-4 4-.7 6.2 3.3 4.5 6.8C19 16.6 12 21 12 21z"/><path d="M9.5 11h2M11.5 9v4"/></svg></div>
         <h3>Saúde</h3>
         <p>Planos individuais, familiares e empresariais nas maiores operadoras.</p>
         <span class="product-card__arrow">→</span>
       </a>
-      <a href="https://www.onscorretoradeseguros.com.br/seguro-viagem" class="product-card" data-reveal>
+      <a href="seguro-viagem.html" class="product-card" data-reveal>
         <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l7-1.5L14.5 3l1.8.7-3 8.2 5.5-.9 2.2 1.6-7.3 3.4-1.4 4.5-1.6-.6.4-4L3 13z"/></svg></div>
         <h3>Viagem</h3>
         <p>Cobertura médica e assistência para viagens nacionais e internacionais.</p>
         <span class="product-card__arrow">→</span>
       </a>
-      <a href="https://www.onscorretoradeseguros.com.br/seguro-empresarial" class="product-card" data-reveal>
+      <a href="seguro-empresarial.html" class="product-card" data-reveal>
         <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7.5" width="18" height="12" rx="2"/><path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5M3 13h18"/></svg></div>
         <h3>Empresarial</h3>
         <p>Soluções sob medida para proteger o patrimônio e a operação do seu negócio.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="fianca.html" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M9 14l2 2 4-4"/></svg></div>
+        <h3>Fiança</h3>
+        <p>Fiança locatícia rápida e sem burocracia pra você alugar seu imóvel com segurança.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="financiamento.html" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 19h18"/></svg></div>
+        <h3>Financiamento</h3>
+        <p>Financiamento de veículo ou imóvel com condições facilitadas e as melhores taxas.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="emprestimo-com-garantia.html" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
+        <h3>Empréstimo com Garantia</h3>
+        <p>Empréstimo com juros menores usando seu imóvel ou veículo como garantia.</p>
+        <span class="product-card__arrow">→</span>
+      </a>
+      <a href="condominio.html" class="product-card" data-reveal>
+        <div class="product-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/><path d="M10 21v-4h4v4"/></svg></div>
+        <h3>Condomínio</h3>
+        <p>Proteção completa para áreas comuns, estrutura e responsabilidade civil do condomínio.</p>
         <span class="product-card__arrow">→</span>
       </a>
     </div>
@@ -287,6 +345,37 @@
     <div class="assist-grid" id="assistGrid">
       <!-- populated by JS -->
     </div>
+  </div>
+</section>
+
+<!-- ===== DEPOIMENTOS ===== -->
+<section class="section section--tint" id="depoimentos">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow" data-reveal>Depoimentos</p>
+      <h2 data-reveal>O que nossos clientes dizem</h2>
+    </div>
+
+    <div class="testimonials" data-reveal>
+      <button class="testimonials__nav testimonials__nav--prev" id="testimonialPrev" aria-label="Depoimento anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <div class="testimonials__card">
+        <svg class="testimonials__quote-mark" viewBox="0 0 44 34" fill="currentColor" aria-hidden="true"><path d="M0 34V20.4C0 9.1 6.8 1.7 17.6 0l2 5.1C13 6.7 9.7 10.6 9.2 16h8.4v18H0zm24.4 0V20.4C24.4 9.1 31.2 1.7 42 0l2 5.1c-6.6 1.6-9.9 5.5-10.4 10.9h8.4v18H24.4z"/></svg>
+        <p class="testimonials__text" id="testimonialText">Carregando...</p>
+        <div class="testimonials__author">
+          <strong id="testimonialName"></strong>
+          <span id="testimonialRole"></span>
+        </div>
+      </div>
+
+      <button class="testimonials__nav testimonials__nav--next" id="testimonialNext" aria-label="Próximo depoimento">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <div class="testimonials__dots" id="testimonialDots"></div>
   </div>
 </section>
 
@@ -344,6 +433,10 @@
           <option>Empresarial</option>
           <option>Consórcio</option>
           <option>Equipamentos Portáteis</option>
+          <option>Fiança</option>
+          <option>Financiamento</option>
+          <option>Empréstimo com Garantia</option>
+          <option>Condomínio</option>
           <option>Outro</option>
         </select>
       </div>
@@ -383,6 +476,7 @@
       <a href="#seguros">Seguros</a>
       <a href="#seguradoras">Seguradoras</a>
       <a href="#assistencia">Assistência 24h</a>
+      <a href="#depoimentos">Depoimentos</a>
       <a href="#contato">Contato</a>
     </div>
   </div>
