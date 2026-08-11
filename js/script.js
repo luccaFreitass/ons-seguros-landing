@@ -71,21 +71,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const insurers = [
     { name: "Porto Seguro", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/porto.jpg" },
     { name: "Itaú Seguros", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/itau.jpg" },
-    { name: "Azul Seguros", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/azul.jpg" },
+    { name: "Azul Seguros", src: "images/parceiros/azul.png" },
     { name: "Tokio Marine", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/tokio.jpg" },
     { name: "HDI Seguros", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/hdi.jpg" },
-    { name: "Yasuda Marítima", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/yasudamaritima.jpg" },
     { name: "Zurich Seguros", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/zurich.jpg" },
     { name: "Mapfre Seguros", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/mapfre.jpg" },
     { name: "Yelum Seguros", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/yelum.jpg" },
     { name: "Allianz Seguros", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/allianz.jpg" },
-    { name: "Generali", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/generali.jpg" },
-    { name: "Rodobens", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/rodobens.jpg" },
     { name: "Mitsui Seguros", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/mitsui.jpg" },
     { name: "Bradesco Saúde", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/bradescosaude.jpg" },
-    { name: "Amil", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/amil.jpg" },
-    { name: "Caixa Saúde", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/caixasaude.jpg" },
-    { name: "Notredame", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/notredame.jpg" }
+    { name: "Amil", src: "images/parceiros/amil.webp" },
+    { name: "Notredame", src: "https://www.onscorretoradeseguros.com.br/images/seguradoras/notredame.jpg" },
+    { name: "Suhai", src: "images/parceiros/suhai.webp" },
+    { name: "Youse", src: "images/parceiros/youse.webp" },
+    { name: "Omint", src: "images/parceiros/omint.webp" },
+    { name: "Sul América", src: "images/parceiros/sulamerica.webp" },
+    { name: "Alice", src: "images/parceiros/alice.webp" },
+    { name: "Med Sênior", src: "images/parceiros/medsenior.webp" },
+    { name: "Unimed", src: "images/parceiros/unimed.webp" }
   ];
 
   const marqueeTrack = document.getElementById("marqueeTrack");
@@ -102,16 +105,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- Assistência 24h ---------- */
   const assist = [
-    { name: "Allianz Seguros", numbers: [["0800-130-700", "Território Nacional"]] },
-    { name: "Azul Seguros", numbers: [["4004-3700", "São Paulo"], ["0300-123-2985", "Demais Regiões"]] },
+    { name: "Allianz Seguros", numbers: [["4090-1110", "Capitais"], ["0800-130-700", "Território Nacional"]] },
+    { name: "Azul Seguros", numbers: [["4004-3700", "São Paulo"], ["0800-703-0203", "Demais Regiões"]] },
     { name: "HDI Seguros", numbers: [["3003-5390", "São Paulo"], ["0800-434-4340", "Demais Regiões"]] },
     { name: "Itaú Seguros", numbers: [["3003-1010", "São Paulo"], ["0800-720-1010", "Demais Regiões"]] },
-    { name: "Yelum Seguros", numbers: [["0800-701-4120", "São Paulo"]] },
+    { name: "Yelum Seguros", numbers: [["4004-5423", "Capitais"], ["0800-701-4120", "São Paulo"]] },
     { name: "Mapfre Seguros", numbers: [["0800-775-4545", "Território Nacional"]] },
     { name: "Mitsui Seguros", numbers: [["3004-6206", "Grandes Capitais"], ["0800-727-3101", "Demais Localidades"]] },
     { name: "Porto Seguro", numbers: [["3337-6786", "São Paulo"], ["0800-727-0800", "Demais Regiões"]] },
     { name: "Tokio Marine", numbers: [["0800-33-86546", "Território Nacional"]] },
-    { name: "Zurich Seguros", numbers: [["4020-4848", "Capitais e Regiões Metrop."], ["0800-285-4141", "Demais Localidades"]] }
+    { name: "Zurich Seguros", numbers: [["4020-4848", "Capitais e Regiões Metrop."], ["0800-285-4141", "Demais Localidades"]] },
+    { name: "Suhai Seguros", numbers: [["3003-0335", "Nacional"], ["0800-327-8424", "Assistência 24 horas"]] },
+    { name: "Youse Seguros", numbers: [["3003-5770", "Capitais"], ["0800-730-9901", "Demais Localidades"]] }
   ];
 
   const assistGrid = document.getElementById("assistGrid");
@@ -129,38 +134,51 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       text: "O atendimento foi muito rápido e sempre tive retorno quando precisei. Todas as minhas dúvidas foram esclarecidas de forma muito clara, o que tornou todo o processo do seguro fiança muito mais tranquilo.",
       name: "Thiago Ruivo",
-      role: "Seguro Fiança"
+      role: "Seguro Fiança",
+      photo: "images/clientes/thiago-ruivo.jpg"
     },
     {
       text: "A contratação do plano de saúde foi muito mais simples do que eu imaginava. Tive todas as minhas dúvidas esclarecidas e o processo foi muito prático. Também conseguiram retirar todas as carências possíveis.",
       name: "Daniela Santa",
-      role: "Plano de Saúde"
+      role: "Plano de Saúde",
+      photo: "images/clientes/daniela-santa.jpeg"
     },
     {
       text: "Na renovação do meu seguro, além de cuidarem de todo o processo, me orientaram sobre algumas opções para melhorar minhas coberturas. Gostei muito do atendimento e da preocupação em encontrar uma solução que realmente fizesse sentido para mim.",
       name: "Luiz Carlos",
-      role: "Renovação de Seguro"
+      role: "Renovação de Seguro",
+      photo: "images/clientes/luiz-carlos.jpg"
     },
     {
       text: "Desde a contratação até a contemplação da minha carta, tive todo o suporte e acompanhamento. Fui orientado para dar o lance e consegui ser contemplado já no primeiro lance. Atendimento excepcional!",
       name: "Leandro Ribeiro",
-      role: "Consórcio"
+      role: "Consórcio",
+      photo: "images/clientes/leandro-ribeiro.jpg"
     },
     {
       text: "Quando precisei acionar o seguro, tive todo o suporte que precisava. A equipe me acompanhou até a indenização da seguradora e sempre esteve disponível para esclarecer minhas dúvidas. Fez toda a diferença ter esse acompanhamento.",
       name: "Gabriel Passos",
-      role: "Sinistro Atendido"
+      role: "Sinistro Atendido",
+      photo: "images/clientes/gabriel-passos.jpg"
     }
   ];
 
   const testimonialText = document.getElementById("testimonialText");
   const testimonialName = document.getElementById("testimonialName");
   const testimonialRole = document.getElementById("testimonialRole");
+  const testimonialAvatar = document.getElementById("testimonialAvatar");
   const testimonialDots = document.getElementById("testimonialDots");
   const testimonialPrev = document.getElementById("testimonialPrev");
   const testimonialNext = document.getElementById("testimonialNext");
   let testimonialIndex = 0;
   let testimonialTimer = null;
+
+  const getInitials = (name) => name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map(w => w[0])
+    .join("");
 
   if (testimonialText && testimonials.length) {
     testimonialDots.innerHTML = testimonials
@@ -174,14 +192,17 @@ document.addEventListener("DOMContentLoaded", () => {
         testimonialText.textContent = t.text;
         testimonialName.textContent = t.name;
         testimonialRole.textContent = t.role;
+        testimonialAvatar.innerHTML = t.photo
+          ? `<img src="${t.photo}" alt="${t.name}" loading="lazy">`
+          : getInitials(t.name);
         dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
       };
       if (window.gsap) {
-        gsap.to([testimonialText, testimonialName, testimonialRole], {
+        gsap.to([testimonialText, testimonialName, testimonialRole, testimonialAvatar], {
           opacity: 0, y: 6, duration: 0.2, ease: "power1.in",
           onComplete: () => {
             apply();
-            gsap.fromTo([testimonialText, testimonialName, testimonialRole],
+            gsap.fromTo([testimonialText, testimonialName, testimonialRole, testimonialAvatar],
               { opacity: 0, y: 6 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out", stagger: 0.04 });
           }
         });
