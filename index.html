@@ -420,24 +420,24 @@
       </ul>
     </div>
 
-    <form class="contact__form" data-reveal onsubmit="return false;">
+    <form class="contact__form" id="contactForm" data-reveal>
       <div class="form-row">
         <div class="form-field">
           <label>Nome</label>
-          <input type="text" required placeholder="Seu nome completo">
+          <input type="text" id="contactName" required placeholder="Seu nome completo">
         </div>
         <div class="form-field">
           <label>WhatsApp</label>
-          <input type="tel" required placeholder="(11) 90000-0000">
+          <input type="tel" id="contactPhone" required placeholder="(11) 90000-0000">
         </div>
       </div>
       <div class="form-field">
         <label>E-mail</label>
-        <input type="email" required placeholder="voce@email.com">
+        <input type="email" id="contactEmail" required placeholder="voce@email.com">
       </div>
       <div class="form-field">
         <label>Tipo de seguro</label>
-        <select>
+        <select id="contactType">
           <option>Automóvel</option>
           <option>Residencial</option>
           <option>Vida</option>
@@ -455,7 +455,7 @@
       </div>
       <div class="form-field">
         <label>Mensagem</label>
-        <textarea rows="3" placeholder="Conte rapidamente o que você precisa"></textarea>
+        <textarea rows="3" id="contactMessage" placeholder="Conte rapidamente o que você precisa"></textarea>
       </div>
 
       <label class="checkbox">

@@ -40,6 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* ---------- Formulário de contato ---------- */
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("contactName").value.trim();
+      const phone = document.getElementById("contactPhone").value.trim();
+      const email = document.getElementById("contactEmail").value.trim();
+      const type = document.getElementById("contactType").value;
+      const message = document.getElementById("contactMessage").value.trim();
+
+      let msg = `Olá! Gostaria de solicitar um orçamento de ${type}.`;
+      msg += ` Meu nome é ${name}.`;
+      if (phone) msg += ` Meu WhatsApp: ${phone}.`;
+      if (email) msg += ` Meu e-mail: ${email}.`;
+      if (message) msg += ` Mensagem: ${message}`;
+
+      const url = `https://api.whatsapp.com/send?phone=5511940209090&text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank", "noopener");
+    });
+  }
+
   /* ---------- Mobile nav ---------- */
   const burger = document.getElementById("burger");
   const navMobile = document.getElementById("navMobile");
